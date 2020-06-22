@@ -1,6 +1,6 @@
 languaje: node_js
 node_js: 
-   - 12.18.p
+   - 12.18.0
 cache: yarn
 
 install:
