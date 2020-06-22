@@ -1,0 +1,20 @@
+languaje: node_js
+node_js: 
+   - 12.18.p
+cache: yarn
+
+install:
+  - yarn install
+
+script:
+  - yarn test
+  - yarn run build 
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on: 
+    branch: master
+  
+
