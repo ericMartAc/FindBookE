@@ -1,24 +1,20 @@
 pipeline {
     agent any
-    tools {nodejs "node"}
-    stages {
 
+    stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                echo 'Building..'
             }
         }
         stage('Test') {
             steps {
-            	sh 'npm test'
-                sh '.config/jenkins/scripts/test.sh'
+                echo 'Testing..'
             }
         }
-        stage('Deliver') { 
+        stage('Deploy') {
             steps {
-                sh '.config/jenkins/scripts/deliver.sh' 
-                input message: 'Finished using the web site? (Click "Proceed" to continue)' 
-                sh '.config/jenkins/scripts/kill.sh' 
+                echo 'Deploying....'
             }
         }
     }
