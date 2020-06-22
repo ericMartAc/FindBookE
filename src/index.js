@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const indexRoute = require('./routes');
+const indexRoute = require('./Routes');
 
 //settings
 app.set('port', 8000);
