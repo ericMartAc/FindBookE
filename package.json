@@ -5,19 +5,19 @@
     "main": "index.js",
     "scripts": {
         "start": "node src",
-        "dev": "nodemon src"
+        "build" "node src"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/EdwardSSQ/FindBookP.git"
+        "url": "git+https://github.com/ericMartAc/FindBookE.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/EdwardSSQ/FindBookP/issues"
+        "url": "https://github.com/ericMartAc/FindBookE/issues"
     },
-    "homepage": "https://github.com/EdwardSSQ/FindBookP#readme",
+    "homepage": "https://github.com/ericMartAc/FindBookE#readme",
     "dependencies": {
         "ejs": "^3.1.3",
         "express": "^4.17.1",
