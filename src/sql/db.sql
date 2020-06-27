@@ -1,6 +1,6 @@
 CREATE DATABASE findbooke;
 
-USE findbooke;
+USE findbookp;
 
 CREATE TABLE user(
     id_user INT NOT NULL PRIMARY KEY AUTO_INCREMENT,

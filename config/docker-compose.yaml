@@ -1,18 +1,17 @@
 version: '3'
 
 services:
-  db:
-    image: mysql
-    restart: always
+  database:
+    image: mysql:5.7
+    container_name: database
+    expose:
+      - 3306
     ports:
-      - 3382:3382
+      - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: rootpsw
+      MYSQL_ROOT_PASSWORD: pswroot
+      MYSQL_DATABASE: findbook
+      MYSQL_USER: poli
+      MYSQL_PASSWORD: poligran21CI
     volumes:
-      - ./code/database:/code/database
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
+      - ./code/database:/var/lib/mysql
