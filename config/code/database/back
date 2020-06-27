@@ -1,18 +1,12 @@
-version: '3'
-
-services:
-  db:
-    image: mysql
+db:
+    image: mongo
     restart: always
     ports:
       - 3382:3382
     environment:
       MYSQL_ROOT_PASSWORD: rootpsw
+      MYSQL_DATABASE: findbook
+      MYSQL_USER: poli
+      MYSQL_PASSWORD: poli21CI
     volumes:
       - ./code/database:/code/database
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
