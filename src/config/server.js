@@ -14,4 +14,7 @@ app.engine('html', require('ejs').renderFile);
 //middleware
 app.use(bodyParser.urlencoded({extended:false}));
 
+//static files
+app.use(express.static(path.join(__dirname,'../app/Public')));
+
 module.exports = app;
