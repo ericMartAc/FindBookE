@@ -14,4 +14,8 @@ services:
       MYSQL_USER: poli
       MYSQL_PASSWORD: poligran21CI
     volumes:
-      - ./code/database:/var/lib/mysql
+      - ./config/code/database:/var/lib/mysql
+
+
+
+  
