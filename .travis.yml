@@ -5,6 +5,7 @@ cache: yarn
 
 install:
   - yarn install
+  - travis_wait 20 mvn install
 
 script:
   - yarn start
@@ -18,8 +19,7 @@ deploy:
   keep_history: true
   on:
     branch: backend_config
-after_deploy:
-  - exit
+
 
 
 
