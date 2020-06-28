@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "node src & process.exit()",
+        "test": "process.exit()",
         "start": "node src"
     },
     "repository": {
