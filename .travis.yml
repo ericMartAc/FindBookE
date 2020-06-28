@@ -1,15 +1,15 @@
 languaje: node_js
-install: travis_wait 5 mvn install
+install: travis_wait 5 install
 node_js: 
    - 12.18.0
-cache: npm
+cache: yarn
 
 install:
-  - npm install
+  - yarn install
 
 script:
-  - npm start
-  - npm test
+  - yarn start
+  - yarn test
 
 deploy:
   provider: pages
