@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"testing..\"",
-        "start": "node src && exit 1"
+        "test": "node src & process.exit()",
+        "start": "node src"
     },
     "repository": {
         "type": "git",
