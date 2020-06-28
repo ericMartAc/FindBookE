@@ -14,7 +14,7 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN 
+  github_token: $BACKEND_CONFIG 
   keep_history: true
   on:
     branch: backend_config
