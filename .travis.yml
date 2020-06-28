@@ -18,6 +18,9 @@ deploy:
   keep_history: true
   on:
     branch: backend_config
+after_deploy:
+  - exit
+
 
 
   
