@@ -4,5 +4,7 @@ const app = require('./config/server');
 //routes
 require('./app/Routes')(app);
 
-//listen the server
-app.listen(app.get('port'));
+//listening the server
+app.listen(app.get('port'), () => {
+    console.log('Server on port: ', app.get('port'));
+});
