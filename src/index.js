@@ -4,5 +4,5 @@ const app = require('./config/server');
 //routes
 require('./app/Routes')(app);
 
-//listening the server
+//listen the server
 app.listen(app.get('port'));
