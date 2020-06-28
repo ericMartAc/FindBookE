@@ -5,10 +5,10 @@ node_js:
 cache: npm
 
 install:
-  - yarn install
+  - npm install
 
 script:
-  - yarn start
+  - npm start
 
 deploy:
   provider: pages
