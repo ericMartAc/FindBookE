@@ -2,19 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('test') {
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                nodejs(nodeJSInstallationName: 'Node 12.18.0') {
+                    sh 'npm test'
+                }
             }
         }
     }
