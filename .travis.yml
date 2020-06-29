@@ -13,10 +13,10 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $BACKEND_CONFIG 
+  github_token: $TESTER 
   keep_history: true
   on:
-    branch: backend_config
+    branch: Test
     
 
 
