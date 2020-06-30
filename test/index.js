@@ -9,8 +9,15 @@ function Index(corriente) {
     app.listen(app.get('port'), () => {
         console.log('Server on port: ', app.get('port'));
     });
+     
 }
-Index();
+try {
+    Index();
+    console.log("testeo terminado");
+} catch (error) {
+    console.log("testeo falló, error: ",error)
+};
+
 setInterval(() => {
     process.exit()
-}, 10000);
+}, 15000);
