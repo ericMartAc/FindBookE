@@ -9,7 +9,7 @@ pipeline {
         }
         stage("instalar herramienta") {
             steps {
-                sh "apt-get install nodejs"
+                sh "sudo apt-get install nodejs"
             }
         }
         stage("Compilar") {
