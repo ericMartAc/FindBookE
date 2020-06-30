@@ -2,7 +2,7 @@
 pipeline {
   agent any
 
-  tools {nodejs "node"}
+  tools {nodejs "nodejs"}
 
   stages {    
     stage('Cloning Git') {
@@ -17,7 +17,7 @@ pipeline {
     }     
     stage('Test') {
       steps {
-         sh 'node test'
+         sh 'npm run test'
       }
     }             
   }
