@@ -1,12 +1,12 @@
 pipeline {
   agent any
  
-  tools {nodejs "nodejs"}
+  tools {nodejs "node"}
  
   stages {
-    stage('Tester') {
+    stage('Example') {
       steps {
-        sh 'npm test'
+        sh 'npm config ls'
       }
     }
   }
