@@ -2,10 +2,10 @@ version: '3'
 
 services:      
   jenkins:
-    container_name: jenkins_blueocean
-    image: jenkinsci/blueocean:latest
+    container_name: jenkins2_131
+    image: jenkins/jenkins:2.131
     ports:
-      - 8081:8080
+      - 8082:8080
       - 50000:50000
     volumes:
       - ./backup/:/var/jenkins_home
