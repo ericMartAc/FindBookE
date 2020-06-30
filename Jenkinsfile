@@ -1,24 +1,21 @@
+
 pipeline {
-  agent any
-  tools { "nodejs"}
-  stages {
-    stage('preflight') {
-      steps {
-        echo sh(returnStdout: true, script: 'env')
-        sh 'node -v'
-      }
+    agent any
+    stages {
+        stage("Clonar") {
+            steps {
+                git url: 'https://github.com/ericMartAc/FindBookE'
+            }
+        }
+        stage("Compilar") {
+            steps {
+                sh "npm install"
+            }
+        }
+        stage("Probar") {
+            steps {
+                sh "npm run test"
+            }
+        }
     }
-    stage('build') {
-      steps {
-        sh 'npm --version'
-        sh 'git log --reverse -1'
-        sh 'npm install'
-      }
-    }
-    stage('test') {
-      steps {
-        sh 'npm test'
-      }
-    }
-  }
 }
