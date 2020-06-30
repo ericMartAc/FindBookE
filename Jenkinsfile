@@ -7,6 +7,11 @@ pipeline {
                 git url: 'https://github.com/ericMartAc/FindBookE'
             }
         }
+        stage("instalar herramienta") {
+            steps {
+                sh "apt-get install nodejs"
+            }
+        }
         stage("Compilar") {
             steps {
                 sh "npm install"
