@@ -8,4 +8,4 @@ services:
       - 8081:8080
       - 50000:50000
     volumes:
-      - .:/var/jenkins_home
+      - ./backup/:/var/jenkins_home

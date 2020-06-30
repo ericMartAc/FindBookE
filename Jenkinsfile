@@ -1,24 +1,24 @@
 pipeline {
   agent any
-
-  tools {nodejs "node"}
-
-  stages {    
-    stage('Cloning Git') {
+  tools {nodejs "12.18.0"}
+  stages {
+    stage('preflight') {
       steps {
-        git 'https://github.com/ericMartAc/FindBookE.git'
+        echo sh(returnStdout: true, script: 'env')
+        sh 'node -v'
       }
-    }        
-    stage('Install dependencies') {
+    }
+    stage('build') {
       steps {
-        sh 'npm i',
-        sh 'npm i -save express'
+        sh 'npm --version'
+        sh 'git log --reverse -1'
+        sh 'npm install'
       }
-    }     
-    stage('Test') {
+    }
+    stage('test') {
       steps {
-         sh 'node server.js'
+        sh 'npm test'
       }
-    }             
+    }
   }
 }
