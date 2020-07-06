@@ -1,7 +1,7 @@
 //assing
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser');
+const morgan = require('morgan');
 
 const app = express();
 
@@ -12,9 +12,18 @@ app.set('views', path.join(__dirname, '../app/Views'));
 app.engine('html', require('ejs').renderFile);
 
 //middleware
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(morgan('dev'));
+app.use(express.urlencoded({extended:false}));
+
+//routes
+app.use(require('../app/Routes'));
 
 //static files
 app.use(express.static(path.join(__dirname,'../app/Public')));
+
+//no encontrado
+app.use((req,res,next)=>{
+    res.send('no found by findbook');
+})
 
 module.exports = app;
