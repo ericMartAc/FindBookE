@@ -1,29 +1,13 @@
 version: '3'
 
 services:
-  database:
-    image: mysql:5.7
-    container_name: database
-    expose:
-      - 3306
-    ports:
-      - 3306:3306
-    environment:
-      MYSQL_ROOT_PASSWORD: pswroot
-      MYSQL_DATABASE: findbook
-      MYSQL_USER: poli
-      MYSQL_PASSWORD: poligran21CI
-    volumes:
-      - ./config/code/database:/var/lib/mysql
-
+  
   project:
     build: .
     expose: 
       - 3500
     ports: 
       - 3500:3500
-    links: 
-      - database
 
 
   
