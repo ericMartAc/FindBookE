@@ -19,9 +19,9 @@ services:
   project:
     build: .
     expose: 
-      - 8000
+      - 3500
     ports: 
-      - 8000:8000
+      - 3500:3500
     links: 
       - database
 

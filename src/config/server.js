@@ -6,7 +6,7 @@ const morgan = require('morgan');
 const app = express();
 
 //settings
-app.set(app.set('port', process.env.PORT || 8050));
+app.set(app.set('port', process.env.PORT || 3500));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../app/Views'));
 app.engine('html', require('ejs').renderFile);
