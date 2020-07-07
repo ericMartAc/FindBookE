@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include ('Partials/head') -%>  
+</head>
+
+<body id="top">
+
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <!-- .site-mobile-menu -->
+
+
+        <!-- NAVBAR -->
+        <header class="site-navbar mt-3">
+            <%- include ('Partials/nav') -%>
+        </header>
+
+        <!-- HOME -->
+        <section class="section-hero overlay inner-page bg-image" style="background-image: url('/images/hero_1.jpg');" id="home-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1 class="text-white font-weight-bold">Contáctanos</h1>
+                        <div class="custom-breadcrumbs">
+                            <a href="/">Inicio</a> <span class="mx-2 slash">/</span>
+                            <span class="text-white"><strong>Contáctanos</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="site-section" id="next-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 ml-auto">
+                        <div class="p-4 mb-3 bg-white">
+                            <p class="mb-0 font-weight-bold">Dirección</p>
+                            <p class="mb-4">Calle 57 Nº 3-00 Este, Bogotá, Colombia</p>
+
+                            <p class="mb-0 font-weight-bold">Correo de contacto</p>
+                            <p class="mb-0"><a href="mailto:dmneiran@poligran.edu.co">findbook@poligran.edu.co</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="site-section bg-light">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 text-center" data-aos="fade">
+                        <h2 class="section-title mb-3">Lo que dicen nuestros usuarios</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="block__87154 bg-white rounded">
+                            <blockquote>
+                                <p>&ldquo;A través de Findbook he logrado obteener contactos y vender mis servicios en desarrollo de software abriendo grandes posibilidades profesionales&rdquo;</p>
+                            </blockquote>
+                            <div class="block__91147 d-flex align-items-center">
+                                <figure class="mr-4"><img src="/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                                <div>
+                                    <h3>Elisabeth Smith</h3>
+                                    <span class="position">Desarrolladora de software</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="block__87154 bg-white rounded">
+                            <blockquote>
+                                <p>&ldquo;He conseguido múltiles opotunidades de trabajo a traés de la plataforma, es genial para ofrecer servicios de manufactura!&rdquo;</p>
+                            </blockquote>
+                            <div class="block__91147 d-flex align-items-center">
+                                <figure class="mr-4"><img src="/images/person_2.jpg" alt="Image" class="img-fluid"></figure>
+                                <div>
+                                    <h3>Chris Peter</h3>
+                                    <span class="position">Técnico en confección</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <%- include ('Partials/footer') -%>
+        </footer>
+
+    </div>
+    <%- include ('Partials/scritps') -%>
+</body>
+
+</html>

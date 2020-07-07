@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('Partials/head') -%>
+</head>
+
+<body id="top">
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <!--site-mobile-menu-->
+
+
+        <!-- NAVBAR -->
+        <header class="site-navbar mt-3">
+            <%- include ('Partials/nav') -%>
+        </header>
+
+        <!-- HOME -->
+        <section class="home-section section-hero overlay bg-image" style="background-image: url('/images/hero_1.jpg');"
+            id="home-section">
+
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-12">
+                        <div class="mb-5 text-center">
+                            <h1 class="text-white font-weight-bold">Servicios especializados a tu alcance</h1>
+                            <p>Encuentra el servicio técnico que deseas en el mejor buscador de soluciones.</p>
+                            <a href="/colaborators" class="btn btn-success btn-block btn-lg">REALIZA TU BUSQUEDA AQUÍ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#next" class="scroll-button smoothscroll">
+                <span class=" icon-keyboard_arrow_down"></span>
+            </a>
+
+        </section>
+
+        <section class="py-5 bg-image overlay-primary fixed overlay" id="next"
+            style="background-image: url('/images/hero_1.jpg');">
+            <div class="container">
+                <div class="row pb-0 block__19738 section-counter">
+
+                    <div class="col-6 col-md-6 col-lg-12 mb-5 mb-lg-0">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <% if(Datos){ 
+                                let count = Object.keys(Datos).length;
+                                %>
+                            <strong class="number" data-number="<%= count %>">0</strong>
+                            <% }else { %>
+                            <strong class="number" data-number="<%= 0 %>">0</strong>
+                            <% } %>
+
+                        </div>
+                        <span class="caption">Colaboradores</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-image overlay-primary fixed overlay"
+            style="background-image: url('/images/hero_1.jpg');">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h2 class="text-white">¿Estás buscando trabajo?</h2>
+                        <p class="mb-0 text-white lead">Registra tu perfil profesional.</p>
+                    </div>
+                    <div class="col-md-3 ml-auto">
+                        <a href="register" class="btn btn-warning btn-block btn-lg">Registro</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <%- include ('Partials/footer') -%>
+        </footer>
+
+    </div>
+    <%- include ('Partials/scritps') -%>
+</body>
+
+</html>
